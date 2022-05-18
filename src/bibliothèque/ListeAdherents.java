@@ -40,8 +40,7 @@ public class ListeAdherents {
         AtomicInteger nb = new AtomicInteger(0);
         index.forEach((i) -> {
             if (i.getAnneeDeNaissance() == a) {
-                int test = nb.get();
-                nb.getAndSet(test + 1);
+                nb.getAndIncrement();
             }
         });
         return nb.get();
